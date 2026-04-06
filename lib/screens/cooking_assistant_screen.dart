@@ -43,20 +43,7 @@ class _CookingAssistantScreenState extends State<CookingAssistantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.recipe.title),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.home),
-            onPressed: () {
-              // Если пользователь уходит в середине готовки, можно показать диалог подтверждения,
-              // но пока для простоты делаем прямой переход
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-            tooltip: 'Прервать и на главную',
-          )
-        ],
-      ),
+      appBar: AppBar(title: Text(widget.recipe.title)), // actions удалены
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(

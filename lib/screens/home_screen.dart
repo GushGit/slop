@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import '../models/meal.dart';
 import '../services/mock_ai_service.dart';
 import 'scanner_screen.dart';
-import 'new_product_scanner_screen.dart'; // Новый импорт
+import 'new_product_scanner_screen.dart';
+import 'profile_screen.dart'; // Импортируем экран профиля
 
 class HomeScreen extends StatefulWidget {
-  final String goal;
-  const HomeScreen({super.key, required this.goal});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Дефолтная цель при первом запуске
+  String _currentGoal = "Сбалансированное питание"; 
   List<Meal> mealPlan = [];
   bool isLoadingPlan = true;
 
@@ -23,14 +25,32 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _loadMealPlan() async {
-    final plan = await MockAIService.generateMealPlan(widget.goal);
+    setState(() => isLoadingPlan = true);
+    final plan = await MockAIService.generateMealPlan(_currentGoal);
     setState(() {
       mealPlan = plan;
       isLoadingPlan = false;
     });
   }
 
-  // Вызов нижнего меню с выбором варианта сканирования
+  // Открываем профиль и ждем результат (выбранную цель)
+  Future<void> _openProfile() async {
+    final newGoal = await Navigator.push<String>(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ProfileScreen(currentGoal: _currentGoal),
+      ),
+    );
+
+    // Если пользователь выбрал новую цель, обновляем план питания
+    if (newGoal != null && newGoal != _currentGoal) {
+      setState(() {
+        _currentGoal = newGoal;
+      });
+      _loadMealPlan();
+    }
+  }
+
   void _showScanOptions(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -46,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
               title: const Text('Сканировать холодильник', style: TextStyle(fontWeight: FontWeight.bold)),
               subtitle: const Text('Найти рецепты из того, что есть'),
               onTap: () {
-                Navigator.pop(ctx); // Закрываем меню
+                Navigator.pop(ctx);
                 Navigator.push(context, MaterialPageRoute(builder: (_) => const ScannerScreen()));
               },
             ),
@@ -77,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _openNewScan(BuildContext context, String method, String loadingText) {
-    Navigator.pop(context); // Закрываем меню
+    Navigator.pop(context);
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -92,7 +112,10 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Reciper AI'),
         actions: [
-          IconButton(icon: const Icon(Icons.person), onPressed: () {}),
+          IconButton(
+            icon: const Icon(Icons.person),
+            onPressed: _openProfile, // Переход в профиль
+          ),
         ],
       ),
       body: Padding(
@@ -100,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Цель: ${widget.goal}',
+            Text('Цель: $_currentGoal',
                 style: const TextStyle(color: Colors.grey, fontSize: 16)),
             const SizedBox(height: 20),
             const Text('Ваш план питания на сегодня',

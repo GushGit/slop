@@ -12,16 +12,7 @@ class RecipesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Что приготовить'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.home),
-            onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
-            tooltip: 'На главную',
-          )
-        ],
-      ),
+      appBar: AppBar(title: const Text('Что приготовить')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -21,6 +21,8 @@ class _ScannerScreenState extends State<ScannerScreen> {
     final recipes = await MockAIService.getRecipes(ingredients);
     
     if (mounted) {
+      // pushReplacement заменяет экран загрузки на экран рецептов. 
+      // Стрелка "назад" на экране рецептов вернет пользователя на HomeScreen.
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -39,13 +41,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(color: Colors.white),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.home, color: Colors.white),
-            onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
-          )
-        ],
+        iconTheme: const IconThemeData(color: Colors.white), // Белая автоматическая стрелка назад
       ),
       body: Center(
         child: Column(

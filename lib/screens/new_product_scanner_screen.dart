@@ -48,16 +48,7 @@ class _NewProductScannerScreenState extends State<NewProductScannerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Добавление продуктов'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.home),
-            onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
-            tooltip: 'На главную',
-          )
-        ],
-      ),
+      appBar: AppBar(title: const Text('Добавление продуктов')), 
       body: isScanning
           ? Center(
               child: Column(

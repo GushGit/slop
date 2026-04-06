@@ -24,11 +24,13 @@ class GoalScreen extends StatelessWidget {
               title: Text(goals[index], style: const TextStyle(fontSize: 18)),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-                Navigator.pushReplacement(
+                // ИСПРАВЛЕНИЕ ЗДЕСЬ: Жестко делаем HomeScreen корневым экраном
+                Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
                     builder: (context) => HomeScreen(goal: goals[index]),
                   ),
+                  (Route<dynamic> route) => false, // Убивает всю предыдущую историю
                 );
               },
             ),
