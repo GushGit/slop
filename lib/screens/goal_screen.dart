@@ -1,41 +1,21 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
 
 class GoalScreen extends StatelessWidget {
   const GoalScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final goals = [
-      "Поддержание формы",
-      "Похудение",
-      "Набор массы",
-      "Сбалансированное питание"
-    ];
-
     return Scaffold(
-      appBar: AppBar(title: const Text('Ваша цель питания?')),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: goals.length,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              title: Text(goals[index], style: const TextStyle(fontSize: 18)),
-              trailing: const Icon(Icons.arrow_forward_ios),
-              onTap: () {
-                // ИСПРАВЛЕНИЕ ЗДЕСЬ: Жестко делаем HomeScreen корневым экраном
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HomeScreen(goal: goals[index]),
-                  ),
-                  (Route<dynamic> route) => false, // Убивает всю предыдущую историю
-                );
-              },
-            ),
-          );
-        },
+      appBar: AppBar(title: const Text('Цели питания')),
+      body: const Padding(
+        padding: EdgeInsets.all(20),
+        child: Center(
+          child: Text(
+            'Выбор режима и расчет КБЖУ доступны на вкладке "Цели" в нижней панели приложения.',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 16),
+          ),
+        ),
       ),
     );
   }

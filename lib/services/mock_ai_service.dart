@@ -66,6 +66,25 @@ class MockAIService {
 
   static Future<List<Meal>> generateMealPlan(String goal) async {
     await Future.delayed(const Duration(seconds: 1));
+
+    final normalizedGoal = goal.toLowerCase();
+
+    if (normalizedGoal.contains('похуд')) {
+      return [
+        Meal(type: "Завтрак", dish: "Омлет с шпинатом"),
+        Meal(type: "Обед", dish: "Курица с киноа"),
+        Meal(type: "Ужин", dish: "Лосось и овощи"),
+      ];
+    }
+
+    if (normalizedGoal.contains('набор')) {
+      return [
+        Meal(type: "Завтрак", dish: "Творог с бананом и орехами"),
+        Meal(type: "Обед", dish: "Паста с говядиной"),
+        Meal(type: "Ужин", dish: "Рис с индейкой"),
+      ];
+    }
+
     return [
       Meal(type: "Завтрак", dish: "Овсянка с ягодами"),
       Meal(type: "Обед", dish: "Куриный салат"),

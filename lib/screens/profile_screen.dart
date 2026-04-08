@@ -24,18 +24,17 @@ class ProfileScreen extends StatelessWidget {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
-          ...goals.map((goal) => RadioListTile<String>(
+          ...goals.map(
+            (goal) => Card(
+              child: ListTile(
                 title: Text(goal),
-                value: goal,
-                groupValue: currentGoal,
-                activeColor: Colors.green,
-                onChanged: (value) {
-                  if (value != null) {
-                    // Возвращаем выбранную цель на предыдущий (главный) экран
-                    Navigator.pop(context, value);
-                  }
-                },
-              )),
+                trailing: currentGoal == goal
+                    ? const Icon(Icons.check_circle, color: Colors.green)
+                    : const Icon(Icons.circle_outlined),
+                onTap: () => Navigator.pop(context, goal),
+              ),
+            ),
+          ),
         ],
       ),
     );
