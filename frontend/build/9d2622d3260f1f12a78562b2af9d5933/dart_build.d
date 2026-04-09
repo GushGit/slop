@@ -1,0 +1,1 @@
+ /home/shove_it/37/temp/slop/build/9d2622d3260f1f12a78562b2af9d5933/dart_build_result.json:  /home/shove_it/.cache/flutter_sdk/bin/cache/dart-sdk/version /home/shove_it/37/temp/slop/.dart_tool/package_config.json /home/shove_it/37/temp/slop/pubspec.yaml
