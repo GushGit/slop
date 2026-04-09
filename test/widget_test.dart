@@ -10,18 +10,18 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:slop/main.dart';
 
 void main() {
-  testWidgets('Bottom tabs are visible and ingredients tab opens', (WidgetTester tester) async {
+  testWidgets('Bottom tabs are visible and refrigerator tab opens', (WidgetTester tester) async {
     await tester.pumpWidget(const ReciperApp());
     await tester.pumpAndSettle();
 
     expect(find.text('Рецепты'), findsWidgets);
-    expect(find.text('Ингредиенты'), findsWidgets);
+    expect(find.text('Холодильник'), findsWidgets);
     expect(find.text('Цели'), findsWidgets);
     expect(find.text('Настройки'), findsWidgets);
 
-    await tester.tap(find.text('Ингредиенты').first);
+    await tester.tap(find.text('Холодильник').first);
     await tester.pumpAndSettle();
 
-    expect(find.text('Текущие продукты'), findsOneWidget);
+    expect(find.text('Электронный холодильник'), findsWidgets);
   });
 }

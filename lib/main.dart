@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+
+import 'controllers/app_controller.dart';
+import 'services/backend_api.dart';
+import 'services/nutrition_service.dart';
+import 'services/pantry_repository.dart';
+import 'services/recipe_repository.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -13,19 +19,22 @@ class ReciperApp extends StatefulWidget {
 }
 
 class _ReciperAppState extends State<ReciperApp> {
-  ThemeMode _themeMode = ThemeMode.system;
-  AppLanguage _appLanguage = AppLanguage.russian;
+  late final AppController _controller;
 
-  void _updateThemeMode(ThemeMode mode) {
-    setState(() {
-      _themeMode = mode;
-    });
+  @override
+  void initState() {
+    super.initState();
+    _controller = AppController(
+      pantryRepository: PantryRepository(backendApi: MockBackendApi()),
+      recipeRepository: RecipeRepository(),
+      nutritionService: NutritionService(),
+    );
   }
 
-  void _updateLanguage(AppLanguage language) {
-    setState(() {
-      _appLanguage = language;
-    });
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   ThemeData _buildTheme(Brightness brightness) {
@@ -58,18 +67,18 @@ class _ReciperAppState extends State<ReciperApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Reciper AI',
-      debugShowCheckedModeBanner: false,
-      theme: _buildTheme(Brightness.light),
-      darkTheme: _buildTheme(Brightness.dark),
-      themeMode: _themeMode,
-      home: HomeScreen(
-        themeMode: _themeMode,
-        appLanguage: _appLanguage,
-        onThemeModeChanged: _updateThemeMode,
-        onLanguageChanged: _updateLanguage,
-      ),
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, _) {
+        return MaterialApp(
+          title: 'Reciper AI',
+          debugShowCheckedModeBanner: false,
+          theme: _buildTheme(Brightness.light),
+          darkTheme: _buildTheme(Brightness.dark),
+          themeMode: _controller.themeMode,
+          home: HomeScreen(controller: _controller),
+        );
+      },
     );
   }
 }
