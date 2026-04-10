@@ -36,6 +36,7 @@ migrate_working_dir/
 /macos
 /ios
 /windows
+/web
 /coverage/
 
 # Symbolication related
