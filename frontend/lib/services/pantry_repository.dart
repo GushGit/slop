@@ -1,3 +1,7 @@
+
+import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../models/pantry_item.dart';
 import '../models/prepared_meal.dart';
 import '../models/scan_history_entry.dart';
@@ -32,6 +36,24 @@ class PantryRepository {
       ..addAll(products.map((p) => p.trim().toLowerCase()));
   }
 
+  Future<void> loadSavedItems() async {
+    final prefs = await SharedPreferences.getInstance();
+    final jsonStr = prefs.getString('pantryItems');
+    if (jsonStr != null) {
+      final list = jsonDecode(jsonStr) as List;
+      _items.clear();
+      for (final item in list) {
+        _items.add(PantryItem.fromJson(item as Map<String, dynamic>));
+      }
+    }
+  }
+
+  Future<void> _saveItems() async {
+    final prefs = await SharedPreferences.getInstance();
+    final list = _items.map((e) => e.toJson()).toList();
+    await prefs.setString('pantryItems', jsonEncode(list));
+  }
+
   Future<void> scanAndAddProducts({
     required String method,
     required String locale,
@@ -62,6 +84,7 @@ class PantryRepository {
         scannedAt: response.scannedAt,
       ),
     );
+    await _saveItems();
   }
 
   void applyIngredientConsumption(Map<String, int> consumptionPercentByIngredient) {
@@ -76,7 +99,10 @@ class PantryRepository {
     _items
       ..clear()
       ..addAll(updatedItems);
+      
+    _saveItems();
   }
+
 
   void addPreparedMeal(PreparedMeal meal) {
     _preparedMeals.insert(0, meal);

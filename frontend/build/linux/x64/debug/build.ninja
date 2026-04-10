@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/jootw/Documents/slop/frontend/build/linux/x64/debug/
+cmake_ninja_workdir = /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug && /usr/sbin/ccmake -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug && /usr/bin/ccmake -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug && /usr/sbin/cmake --regenerate-during-build -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug && /usr/bin/cmake --regenerate-during-build -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -75,7 +75,7 @@ build list_install_components: phony
 # Utility command for install
 
 build CMakeFiles/install.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug && /usr/sbin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -87,7 +87,7 @@ build install: phony CMakeFiles/install.util
 # Utility command for install/local
 
 build CMakeFiles/install/local.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug && /usr/sbin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -99,7 +99,7 @@ build install/local: phony CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug && /usr/sbin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -108,21 +108,21 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jootw/Documents/slop/frontend/linux/CMakeLists.txt
+# /home/shove_it/37/temp/slop/frontend/linux/CMakeLists.txt
 # =============================================================================
 
 
 #############################################
 # Utility command for flutter_assemble
 
-build flutter/flutter_assemble: phony flutter/CMakeFiles/flutter_assemble /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_
+build flutter/flutter_assemble: phony flutter/CMakeFiles/flutter_assemble /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_
 
 
 #############################################
 # Utility command for edit_cache
 
 build flutter/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter && /usr/sbin/ccmake -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter && /usr/bin/ccmake -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -134,7 +134,7 @@ build flutter/edit_cache: phony flutter/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build flutter/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter && /usr/sbin/cmake --regenerate-during-build -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter && /usr/bin/cmake --regenerate-during-build -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -152,7 +152,7 @@ build flutter/list_install_components: phony
 # Utility command for install
 
 build flutter/CMakeFiles/install.util: CUSTOM_COMMAND flutter/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter && /usr/sbin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -164,7 +164,7 @@ build flutter/install: phony flutter/CMakeFiles/install.util
 # Utility command for install/local
 
 build flutter/CMakeFiles/install/local.util: CUSTOM_COMMAND flutter/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter && /usr/sbin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -176,7 +176,7 @@ build flutter/install/local: phony flutter/CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build flutter/CMakeFiles/install/strip.util: CUSTOM_COMMAND flutter/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter && /usr/sbin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -187,20 +187,20 @@ build flutter/install/strip: phony flutter/CMakeFiles/install/strip.util
 #############################################
 # Phony custom command for flutter/CMakeFiles/flutter_assemble
 
-build flutter/CMakeFiles/flutter_assemble | ${cmake_ninja_workdir}flutter/CMakeFiles/flutter_assemble: phony /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h
+build flutter/CMakeFiles/flutter_assemble | ${cmake_ninja_workdir}flutter/CMakeFiles/flutter_assemble: phony /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h
 
 
 #############################################
-# Custom command for /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so
+# Custom command for /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so
 
-build /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_ | ${cmake_ninja_workdir}flutter/_phony_: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter && /usr/sbin/cmake -E env FLUTTER_ROOT=/opt/flutter PROJECT_DIR=/home/jootw/Documents/slop/frontend DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuNDEuNg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049ZGI1MGUyMDE2OA==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049NDI1Y2ZiNTRkMA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My4xMS40 DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=/home/jootw/Documents/slop/frontend/.dart_tool/package_config.json FLUTTER_TARGET=/home/jootw/Documents/slop/frontend/lib/main.dart /opt/flutter/packages/flutter_tools/bin/tool_backend.sh linux-x64 Debug
-  DESC = Generating /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h, /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h, _phony_
+build /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_ | ${cmake_ninja_workdir}flutter/_phony_: CUSTOM_COMMAND
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -E env FLUTTER_ROOT=/home/shove_it/.cache/flutter_sdk PROJECT_DIR=/home/shove_it/37/temp/slop/frontend DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuNDEuNg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049ZGI1MGUyMDE2OA==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049NDI1Y2ZiNTRkMA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My4xMS40 DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=/home/shove_it/37/temp/slop/frontend/.dart_tool/package_config.json FLUTTER_TARGET=/home/shove_it/37/temp/slop/frontend/lib/main.dart /home/shove_it/.cache/flutter_sdk/packages/flutter_tools/bin/tool_backend.sh linux-x64 Debug
+  DESC = Generating /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h, /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h, _phony_
   restat = 1
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jootw/Documents/slop/frontend/linux/CMakeLists.txt
+# /home/shove_it/37/temp/slop/frontend/linux/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -212,32 +212,32 @@ build /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_lin
 
 build cmake_object_order_depends_target_slop: phony || cmake_object_order_depends_target_file_selector_linux_plugin cmake_object_order_depends_target_url_launcher_linux_plugin flutter/flutter_assemble
 
-build runner/CMakeFiles/slop.dir/main.cc.o: CXX_COMPILER__slop_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/runner/main.cc || cmake_object_order_depends_target_slop
+build runner/CMakeFiles/slop.dir/main.cc.o: CXX_COMPILER__slop_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/runner/main.cc || cmake_object_order_depends_target_slop
   CONFIG = Debug
   DEFINES = -DAPPLICATION_ID=\"com.example.slop\"
   DEP_FILE = runner/CMakeFiles/slop.dir/main.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/jootw/Documents/slop/frontend/linux -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/include -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
+  INCLUDES = -I/home/shove_it/37/temp/slop/frontend/linux -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/include -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
   OBJECT_DIR = runner/CMakeFiles/slop.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/slop.dir
   TARGET_SUPPORT_DIR = runner/CMakeFiles/slop.dir
 
-build runner/CMakeFiles/slop.dir/my_application.cc.o: CXX_COMPILER__slop_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/runner/my_application.cc || cmake_object_order_depends_target_slop
+build runner/CMakeFiles/slop.dir/my_application.cc.o: CXX_COMPILER__slop_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/runner/my_application.cc || cmake_object_order_depends_target_slop
   CONFIG = Debug
   DEFINES = -DAPPLICATION_ID=\"com.example.slop\"
   DEP_FILE = runner/CMakeFiles/slop.dir/my_application.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/jootw/Documents/slop/frontend/linux -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/include -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
+  INCLUDES = -I/home/shove_it/37/temp/slop/frontend/linux -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/include -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
   OBJECT_DIR = runner/CMakeFiles/slop.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/slop.dir
   TARGET_SUPPORT_DIR = runner/CMakeFiles/slop.dir
 
-build runner/CMakeFiles/slop.dir/__/flutter/generated_plugin_registrant.cc.o: CXX_COMPILER__slop_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/generated_plugin_registrant.cc || cmake_object_order_depends_target_slop
+build runner/CMakeFiles/slop.dir/__/flutter/generated_plugin_registrant.cc.o: CXX_COMPILER__slop_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/generated_plugin_registrant.cc || cmake_object_order_depends_target_slop
   CONFIG = Debug
   DEFINES = -DAPPLICATION_ID=\"com.example.slop\"
   DEP_FILE = runner/CMakeFiles/slop.dir/__/flutter/generated_plugin_registrant.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/jootw/Documents/slop/frontend/linux -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/include -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
+  INCLUDES = -I/home/shove_it/37/temp/slop/frontend/linux -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/include -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
   OBJECT_DIR = runner/CMakeFiles/slop.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/slop.dir/__/flutter
   TARGET_SUPPORT_DIR = runner/CMakeFiles/slop.dir
@@ -250,12 +250,12 @@ build runner/CMakeFiles/slop.dir/__/flutter/generated_plugin_registrant.cc.o: CX
 #############################################
 # Link the executable intermediates_do_not_run/slop
 
-build intermediates_do_not_run/slop: CXX_EXECUTABLE_LINKER__slop_Debug runner/CMakeFiles/slop.dir/main.cc.o runner/CMakeFiles/slop.dir/my_application.cc.o runner/CMakeFiles/slop.dir/__/flutter/generated_plugin_registrant.cc.o | plugins/file_selector_linux/libfile_selector_linux_plugin.so plugins/url_launcher_linux/liburl_launcher_linux_plugin.so /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/libgtk-3.so /usr/lib/libgdk-3.so /usr/lib/libz.so /usr/lib/libpangocairo-1.0.so /usr/lib/libcairo-gobject.so /usr/lib/libgdk_pixbuf-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libpango-1.0.so /usr/lib/libcairo.so /usr/lib/libharfbuzz.so /usr/lib/libgio-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so || flutter/flutter_assemble plugins/file_selector_linux/libfile_selector_linux_plugin.so plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
+build intermediates_do_not_run/slop: CXX_EXECUTABLE_LINKER__slop_Debug runner/CMakeFiles/slop.dir/main.cc.o runner/CMakeFiles/slop.dir/my_application.cc.o runner/CMakeFiles/slop.dir/__/flutter/generated_plugin_registrant.cc.o | plugins/file_selector_linux/libfile_selector_linux_plugin.so plugins/url_launcher_linux/liburl_launcher_linux_plugin.so /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/libgtk-3.so /usr/lib/libgdk-3.so /usr/lib/libpangocairo-1.0.so /usr/lib/libcairo-gobject.so /usr/lib/libgdk_pixbuf-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libpango-1.0.so /usr/lib/libcairo.so /usr/lib/libharfbuzz.so /usr/lib/libgio-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so /usr/lib/libz.so || flutter/flutter_assemble plugins/file_selector_linux/libfile_selector_linux_plugin.so plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
   CONFIG = Debug
   DEP_FILE = runner/CMakeFiles/slop.dir/link.d
   FLAGS = -g
   LINK_FLAGS = -Xlinker --dependency-file=runner/CMakeFiles/slop.dir/link.d
-  LINK_LIBRARIES = -Wl,-rpath,/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux:/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux:/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral:  plugins/file_selector_linux/libfile_selector_linux_plugin.so  plugins/url_launcher_linux/liburl_launcher_linux_plugin.so  /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/libgtk-3.so  /usr/lib/libgdk-3.so  /usr/lib/libz.so  /usr/lib/libpangocairo-1.0.so  /usr/lib/libcairo-gobject.so  /usr/lib/libgdk_pixbuf-2.0.so  /usr/lib/libatk-1.0.so  /usr/lib/libpango-1.0.so  /usr/lib/libcairo.so  /usr/lib/libharfbuzz.so  /usr/lib/libgio-2.0.so  /usr/lib/libgobject-2.0.so  /usr/lib/libglib-2.0.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux:/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux:/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral:  plugins/file_selector_linux/libfile_selector_linux_plugin.so  plugins/url_launcher_linux/liburl_launcher_linux_plugin.so  /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/libgtk-3.so  /usr/lib/libgdk-3.so  /usr/lib/libpangocairo-1.0.so  /usr/lib/libcairo-gobject.so  /usr/lib/libgdk_pixbuf-2.0.so  /usr/lib/libatk-1.0.so  /usr/lib/libpango-1.0.so  /usr/lib/libcairo.so  /usr/lib/libharfbuzz.so  /usr/lib/libgio-2.0.so  /usr/lib/libgobject-2.0.so  /usr/lib/libglib-2.0.so  /usr/lib/libz.so
   OBJECT_DIR = runner/CMakeFiles/slop.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -268,7 +268,7 @@ build intermediates_do_not_run/slop: CXX_EXECUTABLE_LINKER__slop_Debug runner/CM
 # Utility command for edit_cache
 
 build runner/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner && /usr/sbin/ccmake -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/runner && /usr/bin/ccmake -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -280,7 +280,7 @@ build runner/edit_cache: phony runner/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build runner/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner && /usr/sbin/cmake --regenerate-during-build -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/runner && /usr/bin/cmake --regenerate-during-build -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -298,7 +298,7 @@ build runner/list_install_components: phony
 # Utility command for install
 
 build runner/CMakeFiles/install.util: CUSTOM_COMMAND runner/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner && /usr/sbin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/runner && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -310,7 +310,7 @@ build runner/install: phony runner/CMakeFiles/install.util
 # Utility command for install/local
 
 build runner/CMakeFiles/install/local.util: CUSTOM_COMMAND runner/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner && /usr/sbin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/runner && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -322,7 +322,7 @@ build runner/install/local: phony runner/CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build runner/CMakeFiles/install/strip.util: CUSTOM_COMMAND runner/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner && /usr/sbin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/runner && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -331,7 +331,7 @@ build runner/install/strip: phony runner/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jootw/Documents/slop/frontend/linux/flutter/generated_plugins.cmake
+# /home/shove_it/37/temp/slop/frontend/linux/flutter/generated_plugins.cmake
 # =============================================================================
 
 # =============================================================================
@@ -343,22 +343,22 @@ build runner/install/strip: phony runner/CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_file_selector_linux_plugin: phony || flutter/flutter_assemble
 
-build plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/file_selector_plugin.cc.o: CXX_COMPILER__file_selector_linux_plugin_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/file_selector_plugin.cc || cmake_object_order_depends_target_file_selector_linux_plugin
+build plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/file_selector_plugin.cc.o: CXX_COMPILER__file_selector_linux_plugin_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/file_selector_plugin.cc || cmake_object_order_depends_target_file_selector_linux_plugin
   CONFIG = Debug
   DEFINES = -DFLUTTER_PLUGIN_IMPL -Dfile_selector_linux_plugin_EXPORTS
   DEP_FILE = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/file_selector_plugin.cc.o.d
   FLAGS = -g -fPIC -fvisibility=hidden -Wall -Werror -pthread
-  INCLUDES = -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
+  INCLUDES = -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
   OBJECT_DIR = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir
   OBJECT_FILE_DIR = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir
   TARGET_SUPPORT_DIR = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir
 
-build plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/messages.g.cc.o: CXX_COMPILER__file_selector_linux_plugin_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/messages.g.cc || cmake_object_order_depends_target_file_selector_linux_plugin
+build plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/messages.g.cc.o: CXX_COMPILER__file_selector_linux_plugin_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/messages.g.cc || cmake_object_order_depends_target_file_selector_linux_plugin
   CONFIG = Debug
   DEFINES = -DFLUTTER_PLUGIN_IMPL -Dfile_selector_linux_plugin_EXPORTS
   DEP_FILE = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/messages.g.cc.o.d
   FLAGS = -g -fPIC -fvisibility=hidden -Wall -Werror -pthread
-  INCLUDES = -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
+  INCLUDES = -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
   OBJECT_DIR = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir
   OBJECT_FILE_DIR = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir
   TARGET_SUPPORT_DIR = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir
@@ -371,12 +371,12 @@ build plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/mess
 #############################################
 # Link the shared library plugins/file_selector_linux/libfile_selector_linux_plugin.so
 
-build plugins/file_selector_linux/libfile_selector_linux_plugin.so: CXX_SHARED_LIBRARY_LINKER__file_selector_linux_plugin_Debug plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/file_selector_plugin.cc.o plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/messages.g.cc.o | /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/libgtk-3.so /usr/lib/libgdk-3.so /usr/lib/libz.so /usr/lib/libpangocairo-1.0.so /usr/lib/libcairo-gobject.so /usr/lib/libgdk_pixbuf-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libpango-1.0.so /usr/lib/libcairo.so /usr/lib/libharfbuzz.so /usr/lib/libgio-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so || flutter/flutter_assemble
+build plugins/file_selector_linux/libfile_selector_linux_plugin.so: CXX_SHARED_LIBRARY_LINKER__file_selector_linux_plugin_Debug plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/file_selector_plugin.cc.o plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/messages.g.cc.o | /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/libgtk-3.so /usr/lib/libgdk-3.so /usr/lib/libpangocairo-1.0.so /usr/lib/libcairo-gobject.so /usr/lib/libgdk_pixbuf-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libpango-1.0.so /usr/lib/libcairo.so /usr/lib/libharfbuzz.so /usr/lib/libgio-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so /usr/lib/libz.so || flutter/flutter_assemble
   CONFIG = Debug
   DEP_FILE = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/link.d
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_FLAGS = -shared -Xlinker --dependency-file=plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir/link.d
-  LINK_LIBRARIES = -Wl,-rpath,/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral  /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/libgtk-3.so  /usr/lib/libgdk-3.so  /usr/lib/libz.so  /usr/lib/libpangocairo-1.0.so  /usr/lib/libcairo-gobject.so  /usr/lib/libgdk_pixbuf-2.0.so  /usr/lib/libatk-1.0.so  /usr/lib/libpango-1.0.so  /usr/lib/libcairo.so  /usr/lib/libharfbuzz.so  /usr/lib/libgio-2.0.so  /usr/lib/libgobject-2.0.so  /usr/lib/libglib-2.0.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral  /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/libgtk-3.so  /usr/lib/libgdk-3.so  /usr/lib/libpangocairo-1.0.so  /usr/lib/libcairo-gobject.so  /usr/lib/libgdk_pixbuf-2.0.so  /usr/lib/libatk-1.0.so  /usr/lib/libpango-1.0.so  /usr/lib/libcairo.so  /usr/lib/libharfbuzz.so  /usr/lib/libgio-2.0.so  /usr/lib/libgobject-2.0.so  /usr/lib/libglib-2.0.so  /usr/lib/libz.so
   OBJECT_DIR = plugins/file_selector_linux/CMakeFiles/file_selector_linux_plugin.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -391,7 +391,7 @@ build plugins/file_selector_linux/libfile_selector_linux_plugin.so: CXX_SHARED_L
 # Utility command for edit_cache
 
 build plugins/file_selector_linux/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/sbin/ccmake -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/bin/ccmake -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -403,7 +403,7 @@ build plugins/file_selector_linux/edit_cache: phony plugins/file_selector_linux/
 # Utility command for rebuild_cache
 
 build plugins/file_selector_linux/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/sbin/cmake --regenerate-during-build -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/bin/cmake --regenerate-during-build -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -421,7 +421,7 @@ build plugins/file_selector_linux/list_install_components: phony
 # Utility command for install
 
 build plugins/file_selector_linux/CMakeFiles/install.util: CUSTOM_COMMAND plugins/file_selector_linux/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/sbin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -433,7 +433,7 @@ build plugins/file_selector_linux/install: phony plugins/file_selector_linux/CMa
 # Utility command for install/local
 
 build plugins/file_selector_linux/CMakeFiles/install/local.util: CUSTOM_COMMAND plugins/file_selector_linux/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/sbin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -445,7 +445,7 @@ build plugins/file_selector_linux/install/local: phony plugins/file_selector_lin
 # Utility command for install/strip
 
 build plugins/file_selector_linux/CMakeFiles/install/strip.util: CUSTOM_COMMAND plugins/file_selector_linux/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/sbin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -454,7 +454,7 @@ build plugins/file_selector_linux/install/strip: phony plugins/file_selector_lin
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jootw/Documents/slop/frontend/linux/flutter/generated_plugins.cmake
+# /home/shove_it/37/temp/slop/frontend/linux/flutter/generated_plugins.cmake
 # =============================================================================
 
 # =============================================================================
@@ -466,22 +466,22 @@ build plugins/file_selector_linux/install/strip: phony plugins/file_selector_lin
 
 build cmake_object_order_depends_target_url_launcher_linux_plugin: phony || flutter/flutter_assemble
 
-build plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/messages.g.cc.o: CXX_COMPILER__url_launcher_linux_plugin_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/messages.g.cc || cmake_object_order_depends_target_url_launcher_linux_plugin
+build plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/messages.g.cc.o: CXX_COMPILER__url_launcher_linux_plugin_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/messages.g.cc || cmake_object_order_depends_target_url_launcher_linux_plugin
   CONFIG = Debug
   DEFINES = -DFLUTTER_PLUGIN_IMPL -Durl_launcher_linux_plugin_EXPORTS
   DEP_FILE = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/messages.g.cc.o.d
   FLAGS = -g -fPIC -fvisibility=hidden -Wall -Werror -pthread
-  INCLUDES = -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
+  INCLUDES = -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
   OBJECT_DIR = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
   OBJECT_FILE_DIR = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
   TARGET_SUPPORT_DIR = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
 
-build plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/url_launcher_plugin.cc.o: CXX_COMPILER__url_launcher_linux_plugin_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/url_launcher_plugin.cc || cmake_object_order_depends_target_url_launcher_linux_plugin
+build plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/url_launcher_plugin.cc.o: CXX_COMPILER__url_launcher_linux_plugin_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/url_launcher_plugin.cc || cmake_object_order_depends_target_url_launcher_linux_plugin
   CONFIG = Debug
   DEFINES = -DFLUTTER_PLUGIN_IMPL -Durl_launcher_linux_plugin_EXPORTS
   DEP_FILE = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/url_launcher_plugin.cc.o.d
   FLAGS = -g -fPIC -fvisibility=hidden -Wall -Werror -pthread
-  INCLUDES = -I/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
+  INCLUDES = -I/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/cloudproviders -isystem /usr/include/cairo -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/dbus-1.0/include -isystem /usr/include/fribidi -isystem /usr/include/pixman-1 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6
   OBJECT_DIR = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
   OBJECT_FILE_DIR = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
   TARGET_SUPPORT_DIR = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
@@ -494,12 +494,12 @@ build plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/url_la
 #############################################
 # Link the shared library plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
 
-build plugins/url_launcher_linux/liburl_launcher_linux_plugin.so: CXX_SHARED_LIBRARY_LINKER__url_launcher_linux_plugin_Debug plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/messages.g.cc.o plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/url_launcher_plugin.cc.o | /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/libgtk-3.so /usr/lib/libgdk-3.so /usr/lib/libz.so /usr/lib/libpangocairo-1.0.so /usr/lib/libcairo-gobject.so /usr/lib/libgdk_pixbuf-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libpango-1.0.so /usr/lib/libcairo.so /usr/lib/libharfbuzz.so /usr/lib/libgio-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so || flutter/flutter_assemble
+build plugins/url_launcher_linux/liburl_launcher_linux_plugin.so: CXX_SHARED_LIBRARY_LINKER__url_launcher_linux_plugin_Debug plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/messages.g.cc.o plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/url_launcher_plugin.cc.o | /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/libgtk-3.so /usr/lib/libgdk-3.so /usr/lib/libpangocairo-1.0.so /usr/lib/libcairo-gobject.so /usr/lib/libgdk_pixbuf-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libpango-1.0.so /usr/lib/libcairo.so /usr/lib/libharfbuzz.so /usr/lib/libgio-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so /usr/lib/libz.so || flutter/flutter_assemble
   CONFIG = Debug
   DEP_FILE = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/link.d
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_FLAGS = -shared -Xlinker --dependency-file=plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir/link.d
-  LINK_LIBRARIES = -Wl,-rpath,/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral  /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/libgtk-3.so  /usr/lib/libgdk-3.so  /usr/lib/libz.so  /usr/lib/libpangocairo-1.0.so  /usr/lib/libcairo-gobject.so  /usr/lib/libgdk_pixbuf-2.0.so  /usr/lib/libatk-1.0.so  /usr/lib/libpango-1.0.so  /usr/lib/libcairo.so  /usr/lib/libharfbuzz.so  /usr/lib/libgio-2.0.so  /usr/lib/libgobject-2.0.so  /usr/lib/libglib-2.0.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral  /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/libgtk-3.so  /usr/lib/libgdk-3.so  /usr/lib/libpangocairo-1.0.so  /usr/lib/libcairo-gobject.so  /usr/lib/libgdk_pixbuf-2.0.so  /usr/lib/libatk-1.0.so  /usr/lib/libpango-1.0.so  /usr/lib/libcairo.so  /usr/lib/libharfbuzz.so  /usr/lib/libgio-2.0.so  /usr/lib/libgobject-2.0.so  /usr/lib/libglib-2.0.so  /usr/lib/libz.so
   OBJECT_DIR = plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -514,7 +514,7 @@ build plugins/url_launcher_linux/liburl_launcher_linux_plugin.so: CXX_SHARED_LIB
 # Utility command for edit_cache
 
 build plugins/url_launcher_linux/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/sbin/ccmake -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/bin/ccmake -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -526,7 +526,7 @@ build plugins/url_launcher_linux/edit_cache: phony plugins/url_launcher_linux/CM
 # Utility command for rebuild_cache
 
 build plugins/url_launcher_linux/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/sbin/cmake --regenerate-during-build -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/bin/cmake --regenerate-during-build -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -544,7 +544,7 @@ build plugins/url_launcher_linux/list_install_components: phony
 # Utility command for install
 
 build plugins/url_launcher_linux/CMakeFiles/install.util: CUSTOM_COMMAND plugins/url_launcher_linux/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/sbin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -556,7 +556,7 @@ build plugins/url_launcher_linux/install: phony plugins/url_launcher_linux/CMake
 # Utility command for install/local
 
 build plugins/url_launcher_linux/CMakeFiles/install/local.util: CUSTOM_COMMAND plugins/url_launcher_linux/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/sbin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -568,7 +568,7 @@ build plugins/url_launcher_linux/install/local: phony plugins/url_launcher_linux
 # Utility command for install/strip
 
 build plugins/url_launcher_linux/CMakeFiles/install/strip.util: CUSTOM_COMMAND plugins/url_launcher_linux/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/sbin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -577,7 +577,7 @@ build plugins/url_launcher_linux/install/strip: phony plugins/url_launcher_linux
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jootw/Documents/slop/frontend/linux/flutter/generated_plugins.cmake
+# /home/shove_it/37/temp/slop/frontend/linux/flutter/generated_plugins.cmake
 # =============================================================================
 
 
@@ -585,7 +585,7 @@ build plugins/url_launcher_linux/install/strip: phony plugins/url_launcher_linux
 # Utility command for edit_cache
 
 build plugins/jni/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/sbin/ccmake -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/bin/ccmake -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -597,7 +597,7 @@ build plugins/jni/edit_cache: phony plugins/jni/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build plugins/jni/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/sbin/cmake --regenerate-during-build -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/bin/cmake --regenerate-during-build -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -615,7 +615,7 @@ build plugins/jni/list_install_components: phony
 # Utility command for install
 
 build plugins/jni/CMakeFiles/install.util: CUSTOM_COMMAND plugins/jni/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/sbin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -627,7 +627,7 @@ build plugins/jni/install: phony plugins/jni/CMakeFiles/install.util
 # Utility command for install/local
 
 build plugins/jni/CMakeFiles/install/local.util: CUSTOM_COMMAND plugins/jni/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/sbin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -639,7 +639,7 @@ build plugins/jni/install/local: phony plugins/jni/CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build plugins/jni/CMakeFiles/install/strip.util: CUSTOM_COMMAND plugins/jni/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/sbin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -648,7 +648,7 @@ build plugins/jni/install/strip: phony plugins/jni/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/linux/CMakeLists.txt
+# /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/linux/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -660,7 +660,7 @@ build plugins/jni/install/strip: phony plugins/jni/CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_jni: phony || .
 
-build plugins/jni/shared/CMakeFiles/jni.dir/dartjni.c.o: C_COMPILER__jni_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/dartjni.c || cmake_object_order_depends_target_jni
+build plugins/jni/shared/CMakeFiles/jni.dir/dartjni.c.o: C_COMPILER__jni_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/dartjni.c || cmake_object_order_depends_target_jni
   CONFIG = Debug
   DEFINES = -DDART_SHARED_LIB -Djni_EXPORTS
   DEP_FILE = plugins/jni/shared/CMakeFiles/jni.dir/dartjni.c.o.d
@@ -670,7 +670,7 @@ build plugins/jni/shared/CMakeFiles/jni.dir/dartjni.c.o: C_COMPILER__jni_unscann
   OBJECT_FILE_DIR = plugins/jni/shared/CMakeFiles/jni.dir
   TARGET_SUPPORT_DIR = plugins/jni/shared/CMakeFiles/jni.dir
 
-build plugins/jni/shared/CMakeFiles/jni.dir/third_party/global_jni_env.c.o: C_COMPILER__jni_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/third_party/global_jni_env.c || cmake_object_order_depends_target_jni
+build plugins/jni/shared/CMakeFiles/jni.dir/third_party/global_jni_env.c.o: C_COMPILER__jni_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/third_party/global_jni_env.c || cmake_object_order_depends_target_jni
   CONFIG = Debug
   DEFINES = -DDART_SHARED_LIB -Djni_EXPORTS
   DEP_FILE = plugins/jni/shared/CMakeFiles/jni.dir/third_party/global_jni_env.c.o.d
@@ -680,7 +680,7 @@ build plugins/jni/shared/CMakeFiles/jni.dir/third_party/global_jni_env.c.o: C_CO
   OBJECT_FILE_DIR = plugins/jni/shared/CMakeFiles/jni.dir/third_party
   TARGET_SUPPORT_DIR = plugins/jni/shared/CMakeFiles/jni.dir
 
-build plugins/jni/shared/CMakeFiles/jni.dir/include/dart_api_dl.c.o: C_COMPILER__jni_unscanned_Debug /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/include/dart_api_dl.c || cmake_object_order_depends_target_jni
+build plugins/jni/shared/CMakeFiles/jni.dir/include/dart_api_dl.c.o: C_COMPILER__jni_unscanned_Debug /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/include/dart_api_dl.c || cmake_object_order_depends_target_jni
   CONFIG = Debug
   DEFINES = -DDART_SHARED_LIB -Djni_EXPORTS
   DEP_FILE = plugins/jni/shared/CMakeFiles/jni.dir/include/dart_api_dl.c.o.d
@@ -718,7 +718,7 @@ build plugins/jni/shared/libdartjni.so: C_SHARED_LIBRARY_LINKER__jni_Debug plugi
 # Utility command for edit_cache
 
 build plugins/jni/shared/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/sbin/ccmake -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/bin/ccmake -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -730,7 +730,7 @@ build plugins/jni/shared/edit_cache: phony plugins/jni/shared/CMakeFiles/edit_ca
 # Utility command for rebuild_cache
 
 build plugins/jni/shared/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/sbin/cmake --regenerate-during-build -S/home/jootw/Documents/slop/frontend/linux -B/home/jootw/Documents/slop/frontend/build/linux/x64/debug
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/bin/cmake --regenerate-during-build -S/home/shove_it/37/temp/slop/frontend/linux -B/home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -748,7 +748,7 @@ build plugins/jni/shared/list_install_components: phony
 # Utility command for install
 
 build plugins/jni/shared/CMakeFiles/install.util: CUSTOM_COMMAND plugins/jni/shared/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/sbin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -760,7 +760,7 @@ build plugins/jni/shared/install: phony plugins/jni/shared/CMakeFiles/install.ut
 # Utility command for install/local
 
 build plugins/jni/shared/CMakeFiles/install/local.util: CUSTOM_COMMAND plugins/jni/shared/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/sbin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -772,7 +772,7 @@ build plugins/jni/shared/install/local: phony plugins/jni/shared/CMakeFiles/inst
 # Utility command for install/strip
 
 build plugins/jni/shared/CMakeFiles/install/strip.util: CUSTOM_COMMAND plugins/jni/shared/all
-  COMMAND = cd /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/sbin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/shared && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -804,49 +804,49 @@ build url_launcher_linux_plugin: phony plugins/url_launcher_linux/liburl_launche
 # =============================================================================
 
 #############################################
-# Folder: /home/jootw/Documents/slop/frontend/build/linux/x64/debug
+# Folder: /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug
 
 build all: phony flutter/all runner/all plugins/file_selector_linux/all plugins/url_launcher_linux/all plugins/jni/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter
+# Folder: /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter
 
 build flutter/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux
+# Folder: /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux
 
 build plugins/file_selector_linux/all: phony plugins/file_selector_linux/libfile_selector_linux_plugin.so
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni
+# Folder: /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni
 
 build plugins/jni/all: phony plugins/jni/shared/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared
+# Folder: /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/shared
 
 build plugins/jni/shared/all: phony plugins/jni/shared/libdartjni.so
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux
+# Folder: /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux
 
 build plugins/url_launcher_linux/all: phony plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner
+# Folder: /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/runner
 
 build runner/all: phony intermediates_do_not_run/slop
 
@@ -857,14 +857,14 @@ build runner/all: phony intermediates_do_not_run/slop
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /home/jootw/Documents/slop/frontend/build/linux/x64/debug/cmake_install.cmake /home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter/cmake_install.cmake /home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner/cmake_install.cmake /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux/cmake_install.cmake /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux/cmake_install.cmake /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/cmake_install.cmake /home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared/cmake_install.cmake: RERUN_CMAKE | /home/jootw/Documents/slop/frontend/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/generated_config.cmake /home/jootw/Documents/slop/frontend/linux/flutter/generated_plugins.cmake /home/jootw/Documents/slop/frontend/linux/runner/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindJavaCommon.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePushCheckState.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindJNI.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.3.0/CMakeCCompiler.cmake CMakeFiles/4.3.0/CMakeCXXCompiler.cmake CMakeFiles/4.3.0/CMakeSystem.cmake
+build build.ninja /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/cmake_install.cmake /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/flutter/cmake_install.cmake /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/runner/cmake_install.cmake /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux/cmake_install.cmake /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux/cmake_install.cmake /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/cmake_install.cmake /home/shove_it/37/temp/slop/frontend/build/linux/x64/debug/plugins/jni/shared/cmake_install.cmake: RERUN_CMAKE | /home/shove_it/37/temp/slop/frontend/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/generated_config.cmake /home/shove_it/37/temp/slop/frontend/linux/flutter/generated_plugins.cmake /home/shove_it/37/temp/slop/frontend/linux/runner/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindJavaCommon.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePushCheckState.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindJNI.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.3.1/CMakeCCompiler.cmake CMakeFiles/4.3.1/CMakeCXXCompiler.cmake CMakeFiles/4.3.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/jootw/Documents/slop/frontend/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/generated_config.cmake /home/jootw/Documents/slop/frontend/linux/flutter/generated_plugins.cmake /home/jootw/Documents/slop/frontend/linux/runner/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindJavaCommon.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePushCheckState.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindJNI.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.3.0/CMakeCCompiler.cmake CMakeFiles/4.3.0/CMakeCXXCompiler.cmake CMakeFiles/4.3.0/CMakeSystem.cmake: phony
+build /home/shove_it/37/temp/slop/frontend/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/jni/src/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/shove_it/37/temp/slop/frontend/linux/flutter/ephemeral/generated_config.cmake /home/shove_it/37/temp/slop/frontend/linux/flutter/generated_plugins.cmake /home/shove_it/37/temp/slop/frontend/linux/runner/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindJavaCommon.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePushCheckState.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindJNI.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Linker/GNU-C.cmake /usr/share/cmake/Modules/Linker/GNU-CXX.cmake /usr/share/cmake/Modules/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/GNU.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.3.1/CMakeCCompiler.cmake CMakeFiles/4.3.1/CMakeCXXCompiler.cmake CMakeFiles/4.3.1/CMakeSystem.cmake: phony
 
 
 #############################################

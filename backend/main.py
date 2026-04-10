@@ -192,4 +192,4 @@ async def get_recipes(request: RecipeRequest):
     return suggest_recipes(request.products, request.utilities, request.goal)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)

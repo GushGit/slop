@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/app_enums.dart';
 import '../models/cooking_result.dart';
@@ -23,15 +26,6 @@ class AppController extends ChangeNotifier {
         _nutritionService = nutritionService {
     _recalculateNutrition(showNotify: false);
   }
-  Future<void> initialize() async {
-    try {
-      await _pantryRepository.loadSupportedProducts();
-      notifyListeners();
-    } catch (_) {
-      // Keep app usable if backend is not reachable on startup.
-    }
-  }
-
 
   final PantryRepository _pantryRepository;
   final RecipeRepository _recipeRepository;
@@ -60,35 +54,110 @@ class AppController extends ChangeNotifier {
   List<PreparedMeal> get preparedMeals => _pantryRepository.preparedMeals;
   List<ScanHistoryEntry> get scanHistory => _pantryRepository.history;
 
-  void setThemeMode(ThemeMode mode) {
+
+  Future<void> initialize() async {
+    await _loadSettings();
+    await _loadSavedRecipes();
+    try {
+      await _pantryRepository.loadSavedItems();
+      await _pantryRepository.loadSupportedProducts();
+      notifyListeners();
+    } catch (_) {
+      // Keep app usable if backend is not reachable on startup.
+    }
+  }
+
+  Future<void> _saveRecipes() async {
+    final prefs = await SharedPreferences.getInstance();
+    final list = visibleRecipes.map((e) => e.toJson()).toList();
+    await prefs.setString('visibleRecipes', jsonEncode(list));
+  }
+
+  Future<void> _loadSavedRecipes() async {
+    final prefs = await SharedPreferences.getInstance();
+    final jsonStr = prefs.getString('visibleRecipes');
+    if (jsonStr != null) {
+      try {
+        final list = jsonDecode(jsonStr) as List;
+        visibleRecipes.clear();
+        for (final item in list) {
+          visibleRecipes.add(RecipeOption.fromJson(item as Map<String, dynamic>));
+        }
+      } catch (_) {}
+    }
+  }
+
+
+  Future<void> _loadSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    final themeIndex = prefs.getInt('themeMode');
+    if (themeIndex != null) themeMode = ThemeMode.values[themeIndex];
+
+    final langIndex = prefs.getInt('appLanguage');
+    if (langIndex != null) appLanguage = AppLanguage.values[langIndex];
+
+    final goalIndex = prefs.getInt('goalMode');
+    if (goalIndex != null) goalMode = GoalMode.values[goalIndex];
+
+    final dateMs = prefs.getInt('goalPeriodEndDate');
+    if (dateMs != null) goalPeriodEndDate = DateTime.fromMillisecondsSinceEpoch(dateMs);
+
+    final mealIndex = prefs.getInt('selectedMealType');
+    if (mealIndex != null) selectedMealType = MealType.values[mealIndex];
+
+    final fridgeIndex = prefs.getInt('fridgeViewType');
+    if (fridgeIndex != null) fridgeViewType = FridgeViewType.values[fridgeIndex];
+
+    weight = prefs.getInt('weight') ?? weight;
+    height = prefs.getInt('height') ?? height;
+    age = prefs.getInt('age') ?? age;
+    activityMultiplier = prefs.getDouble('activityMultiplier') ?? activityMultiplier;
+
+    _recalculateNutrition(showNotify: false);
+  }
+
+  void setThemeMode(ThemeMode mode) async {
     themeMode = mode;
     notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('themeMode', mode.index);
   }
 
-  void setLanguage(AppLanguage language) {
-    appLanguage = AppLanguage.russian;
+  void setLanguage(AppLanguage language) async {
+    appLanguage = language;
     notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('appLanguage', language.index);
   }
 
-  void setGoalMode(GoalMode mode) {
+  void setGoalMode(GoalMode mode) async {
     goalMode = mode;
     _recalculateNutrition(showNotify: false);
     notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('goalMode', mode.index);
   }
 
-  void setGoalPeriodEndDate(DateTime date) {
+  void setGoalPeriodEndDate(DateTime date) async {
     goalPeriodEndDate = date;
     notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('goalPeriodEndDate', date.millisecondsSinceEpoch);
   }
 
-  void setMealType(MealType mealType) {
+  void setMealType(MealType mealType) async {
     selectedMealType = mealType;
     notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('selectedMealType', mealType.index);
   }
 
-  void setFridgeViewType(FridgeViewType type) {
+  void setFridgeViewType(FridgeViewType type) async {
     fridgeViewType = type;
     notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('fridgeViewType', type.index);
   }
 
   void setAnthropometry({
@@ -96,7 +165,7 @@ class AppController extends ChangeNotifier {
     required int updatedHeight,
     required int updatedAge,
     required double updatedActivityMultiplier,
-  }) {
+  }) async {
     weight = updatedWeight;
     height = updatedHeight;
     age = updatedAge;
@@ -104,6 +173,12 @@ class AppController extends ChangeNotifier {
 
     _recalculateNutrition(showNotify: false);
     notifyListeners();
+    
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('weight', weight);
+    await prefs.setInt('height', height);
+    await prefs.setInt('age', age);
+    await prefs.setDouble('activityMultiplier', activityMultiplier);
   }
 
   void selectProgressDate(DateTime date) {
@@ -203,6 +278,7 @@ class AppController extends ChangeNotifier {
       availableIngredientNames: pantryItems.map((item) => item.name).toList(),
     );
     if (showNotify) {
+    await _saveRecipes();
       notifyListeners();
     }
   }
