@@ -61,6 +61,7 @@ class _InteractiveCookingScreenState extends State<InteractiveCookingScreen> {
   @override
   Widget build(BuildContext context) {
     final stepText = widget.recipe.steps[_stepIndex];
+    final hasTimerForStep = _currentStepDurationSec > 0;
 
     return Scaffold(
       appBar: AppBar(title: Text('Готовка: ${widget.recipe.title}')),
@@ -98,26 +99,28 @@ class _InteractiveCookingScreenState extends State<InteractiveCookingScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
-            Text('Таймер шага', style: Theme.of(context).textTheme.titleMedium),
-            const SizedBox(height: 8),
-            Text(_formatSeconds(_remainingSeconds), style: Theme.of(context).textTheme.displaySmall),
-            const SizedBox(height: 10),
-            Row(
-              children: [
-                FilledButton.icon(
-                  onPressed: _isRunning ? _pauseTimer : _startTimer,
-                  icon: Icon(_isRunning ? Icons.pause : Icons.play_arrow),
-                  label: Text(_isRunning ? 'Пауза' : 'Старт'),
-                ),
-                const SizedBox(width: 8),
-                OutlinedButton.icon(
-                  onPressed: _resetTimerForCurrentStep,
-                  icon: const Icon(Icons.replay),
-                  label: const Text('Сброс'),
-                ),
-              ],
-            ),
+            if (hasTimerForStep) ...[
+              const SizedBox(height: 20),
+              Text('Таймер шага', style: Theme.of(context).textTheme.titleMedium),
+              const SizedBox(height: 8),
+              Text(_formatSeconds(_remainingSeconds), style: Theme.of(context).textTheme.displaySmall),
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  FilledButton.icon(
+                    onPressed: _isRunning ? _pauseTimer : _startTimer,
+                    icon: Icon(_isRunning ? Icons.pause : Icons.play_arrow),
+                    label: Text(_isRunning ? 'Пауза' : 'Старт'),
+                  ),
+                  const SizedBox(width: 8),
+                  OutlinedButton.icon(
+                    onPressed: _resetTimerForCurrentStep,
+                    icon: const Icon(Icons.replay),
+                    label: const Text('Сброс'),
+                  ),
+                ],
+              ),
+            ],
             const Spacer(),
             Row(
               children: [
@@ -172,13 +175,17 @@ class _InteractiveCookingScreenState extends State<InteractiveCookingScreen> {
 
   void _resetTimerForCurrentStep() {
     _pauseTimer();
-    final fallback = 60;
-    final value = _stepIndex < widget.recipe.stepDurationsSec.length
-        ? widget.recipe.stepDurationsSec[_stepIndex]
-        : fallback;
     setState(() {
-      _remainingSeconds = value;
+      _remainingSeconds = _currentStepDurationSec;
     });
+  }
+
+  int get _currentStepDurationSec {
+    if (_stepIndex < widget.recipe.stepDurationsSec.length) {
+      final value = widget.recipe.stepDurationsSec[_stepIndex];
+      return value < 0 ? 0 : value;
+    }
+    return 0;
   }
 
   Future<void> _speak(String text) async {

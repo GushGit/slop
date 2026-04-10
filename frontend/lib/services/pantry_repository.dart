@@ -8,38 +8,8 @@ class PantryRepository {
 
   final BackendApi _backendApi;
 
-  final List<PantryItem> _items = [
-    const PantryItem(
-      name: 'Куриная грудка',
-      remainingPercent: 70,
-      expiresInDays: 2,
-      priceRub: 289,
-      calories: 165,
-      proteins: 31,
-      fats: 3.6,
-      carbs: 0,
-    ),
-    const PantryItem(
-      name: 'Овсяные хлопья',
-      remainingPercent: 85,
-      expiresInDays: 20,
-      priceRub: 89,
-      calories: 352,
-      proteins: 12,
-      fats: 6,
-      carbs: 62,
-    ),
-    const PantryItem(
-      name: 'Ягоды',
-      remainingPercent: 70,
-      expiresInDays: 3,
-      priceRub: 179,
-      calories: 57,
-      proteins: 1,
-      fats: 0.3,
-      carbs: 12,
-    ),
-  ];
+  final List<PantryItem> _items = [];
+  final Set<String> _supportedProducts = {};
 
   final List<ScanHistoryEntry> _history = [
     ScanHistoryEntry(
@@ -55,21 +25,40 @@ class PantryRepository {
   List<ScanHistoryEntry> get history => List.unmodifiable(_history);
   List<PreparedMeal> get preparedMeals => List.unmodifiable(_preparedMeals);
 
+  Future<void> loadSupportedProducts() async {
+    final products = await _backendApi.fetchProducts();
+    _supportedProducts
+      ..clear()
+      ..addAll(products.map((p) => p.trim().toLowerCase()));
+  }
+
   Future<void> scanAndAddProducts({
     required String method,
     required String locale,
     required String methodLabel,
+    required String imagePath,
   }) async {
     final response = await _backendApi.scanProducts(
-      ScanRequest(method: method, locale: locale),
+      ScanRequest(method: method, locale: locale, imagePath: imagePath),
     );
 
-    _items.insertAll(0, response.items);
+    final existingNames = _items.map((e) => e.name.trim().toLowerCase()).toSet();
+    final filteredUnique = response.items.where((item) {
+      final normalized = item.name.trim().toLowerCase();
+      final supported = _supportedProducts.isEmpty || _supportedProducts.contains(normalized);
+      if (!supported || existingNames.contains(normalized)) {
+        return false;
+      }
+      existingNames.add(normalized);
+      return true;
+    }).toList();
+
+    _items.insertAll(0, filteredUnique);
     _history.insert(
       0,
       ScanHistoryEntry(
         method: methodLabel,
-        addedCount: response.items.length,
+        addedCount: filteredUnique.length,
         scannedAt: response.scannedAt,
       ),
     );

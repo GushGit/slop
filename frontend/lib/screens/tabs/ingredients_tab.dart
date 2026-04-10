@@ -14,6 +14,8 @@ class FridgeTab extends StatelessWidget {
     required this.preparedMeals,
     required this.onConsumePreparedMeal,
     required this.history,
+    required this.onSuggestRecipes,
+    required this.isSuggestingRecipes,
   });
 
   final FridgeViewType viewType;
@@ -22,6 +24,8 @@ class FridgeTab extends StatelessWidget {
   final List<PreparedMeal> preparedMeals;
   final void Function(PreparedMeal meal, int consumedPercent) onConsumePreparedMeal;
   final List<ScanHistoryEntry> history;
+  final Future<void> Function() onSuggestRecipes;
+  final bool isSuggestingRecipes;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +45,18 @@ class FridgeTab extends StatelessWidget {
               onViewTypeChanged(selection.first);
             }
           },
+        ),
+        const SizedBox(height: 12),
+        FilledButton.icon(
+          onPressed: isSuggestingRecipes ? null : onSuggestRecipes,
+          icon: isSuggestingRecipes
+              ? const SizedBox(
+                  width: 16,
+                  height: 16,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                )
+              : const Icon(Icons.auto_awesome),
+          label: Text(isSuggestingRecipes ? 'Подбираем рецепты...' : 'Предложить рецепты'),
         ),
         const SizedBox(height: 12),
         if (viewType == FridgeViewType.ingredients)

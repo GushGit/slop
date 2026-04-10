@@ -101,16 +101,21 @@ class _RecipeTile extends StatelessWidget {
             Positioned.fill(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
-                child: Image.network(
-                  recipe.imageUrl,
-                  fit: BoxFit.cover,
-                  errorBuilder: (context, error, stackTrace) {
-                    return Container(
-                      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                      child: const Icon(Icons.image_not_supported, size: 40),
-                    );
-                  },
-                ),
+                child: recipe.imageUrl.trim().isEmpty
+                    ? Container(
+                        color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                        child: const Icon(Icons.restaurant_menu, size: 40),
+                      )
+                    : Image.network(
+                        recipe.imageUrl,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Container(
+                            color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                            child: const Icon(Icons.image_not_supported, size: 40),
+                          );
+                        },
+                      ),
               ),
             ),
             Positioned(

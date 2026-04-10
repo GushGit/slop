@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../controllers/app_controller.dart';
 import '../models/app_enums.dart';
@@ -26,6 +27,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedTabIndex = 0;
   bool _isScanning = false;
+  bool _isSuggestingRecipes = false;
+  final ImagePicker _picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 preparedMeals: widget.controller.preparedMeals,
                 onConsumePreparedMeal: _consumePreparedMeal,
                 history: widget.controller.scanHistory,
+                onSuggestRecipes: _suggestRecipesFromFridge,
+                isSuggestingRecipes: _isSuggestingRecipes,
               ),
               GoalsTab(
                 goalMode: widget.controller.goalMode,
@@ -167,26 +172,18 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ListTile(
                 leading: const Icon(Icons.camera_alt),
-                title: const Text('Сфотографировать продукты'),
+                title: const Text('Сделать фото'),
                 onTap: () {
                   Navigator.pop(sheetContext);
-                  _scanProducts(method: 'photo', methodLabel: 'Фото');
+                  _scanFromSource(ImageSource.camera, method: 'camera', methodLabel: 'Фото');
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.receipt_long),
-                title: const Text('Распознать чек'),
+                leading: const Icon(Icons.photo_library_outlined),
+                title: const Text('Выбрать из галереи'),
                 onTap: () {
                   Navigator.pop(sheetContext);
-                  _scanProducts(method: 'receipt', methodLabel: 'Чек');
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.qr_code_scanner),
-                title: const Text('Сканировать штрихкод / QR'),
-                onTap: () {
-                  Navigator.pop(sheetContext);
-                  _scanProducts(method: 'barcode', methodLabel: 'Штрихкод');
+                  _scanFromSource(ImageSource.gallery, method: 'gallery', methodLabel: 'Галерея');
                 },
               ),
             ],
@@ -196,13 +193,37 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Future<void> _scanProducts({required String method, required String methodLabel}) async {
+  Future<void> _scanFromSource(
+    ImageSource source, {
+    required String method,
+    required String methodLabel,
+  }) async {
+    final picked = await _picker.pickImage(source: source);
+    if (!mounted || picked == null) {
+      return;
+    }
+    await _scanProducts(
+      method: method,
+      methodLabel: methodLabel,
+      imagePath: picked.path,
+    );
+  }
+
+  Future<void> _scanProducts({
+    required String method,
+    required String methodLabel,
+    required String imagePath,
+  }) async {
     setState(() {
       _isScanning = true;
     });
 
     try {
-      await widget.controller.scanProducts(method: method, methodLabel: methodLabel);
+      await widget.controller.scanProducts(
+        method: method,
+        methodLabel: methodLabel,
+        imagePath: imagePath,
+      );
       if (!mounted) {
         return;
       }
@@ -213,6 +234,30 @@ class _HomeScreenState extends State<HomeScreen> {
       if (mounted) {
         setState(() {
           _isScanning = false;
+        });
+      }
+    }
+  }
+
+  Future<void> _suggestRecipesFromFridge() async {
+    setState(() {
+      _isSuggestingRecipes = true;
+    });
+    try {
+      await widget.controller.suggestRecipesFromFridge();
+      if (!mounted) {
+        return;
+      }
+      setState(() {
+        _selectedTabIndex = 0;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Рецепты обновлены по продуктам из холодильника.')),
+      );
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isSuggestingRecipes = false;
         });
       }
     }

@@ -24,11 +24,13 @@ class _ReciperAppState extends State<ReciperApp> {
   @override
   void initState() {
     super.initState();
+    final backendApi = HttpBackendApi();
     _controller = AppController(
-      pantryRepository: PantryRepository(backendApi: MockBackendApi()),
-      recipeRepository: RecipeRepository(),
+      pantryRepository: PantryRepository(backendApi: backendApi),
+      recipeRepository: RecipeRepository(backendApi: backendApi),
       nutritionService: NutritionService(),
     );
+    _controller.initialize();
   }
 
   @override

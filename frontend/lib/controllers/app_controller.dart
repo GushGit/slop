@@ -22,8 +22,16 @@ class AppController extends ChangeNotifier {
         _recipeRepository = recipeRepository,
         _nutritionService = nutritionService {
     _recalculateNutrition(showNotify: false);
-    _refreshRecipes(showNotify: false);
   }
+  Future<void> initialize() async {
+    try {
+      await _pantryRepository.loadSupportedProducts();
+      notifyListeners();
+    } catch (_) {
+      // Keep app usable if backend is not reachable on startup.
+    }
+  }
+
 
   final PantryRepository _pantryRepository;
   final RecipeRepository _recipeRepository;
@@ -64,7 +72,6 @@ class AppController extends ChangeNotifier {
 
   void setGoalMode(GoalMode mode) {
     goalMode = mode;
-    _refreshRecipes(showNotify: false);
     _recalculateNutrition(showNotify: false);
     notifyListeners();
   }
@@ -76,7 +83,6 @@ class AppController extends ChangeNotifier {
 
   void setMealType(MealType mealType) {
     selectedMealType = mealType;
-    _refreshRecipes(showNotify: false);
     notifyListeners();
   }
 
@@ -108,19 +114,24 @@ class AppController extends ChangeNotifier {
   Future<void> scanProducts({
     required String method,
     required String methodLabel,
+    required String imagePath,
   }) async {
     await _pantryRepository.scanAndAddProducts(
       method: method,
       locale: appLanguage == AppLanguage.russian ? 'ru' : 'en',
       methodLabel: methodLabel,
+      imagePath: imagePath,
     );
-    _refreshRecipes(showNotify: false);
+    notifyListeners();
+  }
+
+  Future<void> suggestRecipesFromFridge() async {
+    await _refreshRecipes(showNotify: false);
     notifyListeners();
   }
 
   void applyIngredientConsumption(Map<String, int> consumptionPercentByIngredient) {
     _pantryRepository.applyIngredientConsumption(consumptionPercentByIngredient);
-    _refreshRecipes(showNotify: false);
     notifyListeners();
   }
 
@@ -145,7 +156,6 @@ class AppController extends ChangeNotifier {
       ),
     );
 
-    _refreshRecipes(showNotify: false);
     notifyListeners();
   }
 
@@ -168,7 +178,6 @@ class AppController extends ChangeNotifier {
       carbs: meal.carbs * bounded / 100,
     );
 
-    _refreshRecipes(showNotify: false);
     notifyListeners();
   }
 
@@ -187,8 +196,8 @@ class AppController extends ChangeNotifier {
     return null;
   }
 
-  void _refreshRecipes({bool showNotify = true}) {
-    visibleRecipes = _recipeRepository.getRecipes(
+  Future<void> _refreshRecipes({bool showNotify = true}) async {
+    visibleRecipes = await _recipeRepository.getRecipes(
       mealType: selectedMealType,
       goalMode: goalMode,
       availableIngredientNames: pantryItems.map((item) => item.name).toList(),

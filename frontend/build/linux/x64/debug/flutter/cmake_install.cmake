@@ -1,8 +1,8 @@
-# Install script for directory: /home/shove_it/37/temp/slop/linux/flutter
+# Install script for directory: /home/jootw/Documents/slop/frontend/linux/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,12 +39,12 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
+  set(CMAKE_OBJDUMP "/usr/sbin/llvm-objdump")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/shove_it/37/temp/slop/build/linux/x64/debug/flutter/install_local_manifest.txt"
+  file(WRITE "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

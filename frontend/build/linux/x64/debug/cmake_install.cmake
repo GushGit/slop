@@ -1,8 +1,8 @@
-# Install script for directory: /home/shove_it/37/temp/slop/linux
+# Install script for directory: /home/jootw/Documents/slop/frontend/linux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,134 +39,147 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
+  set(CMAKE_OBJDUMP "/usr/sbin/llvm-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   
-  file(REMOVE_RECURSE "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/")
+  file(REMOVE_RECURSE "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/")
   
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop")
+  if(EXISTS "$ENV{DESTDIR}/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop"
+         FILE "$ENV{DESTDIR}/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop"
          RPATH "$ORIGIN/lib")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop")
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle" TYPE EXECUTABLE FILES "/home/shove_it/37/temp/slop/build/linux/x64/debug/intermediates_do_not_run/slop")
-  if(EXISTS "$ENV{DESTDIR}/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop")
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle" TYPE EXECUTABLE FILES "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/intermediates_do_not_run/slop")
+  if(EXISTS "$ENV{DESTDIR}/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop"
-         OLD_RPATH "/home/shove_it/37/temp/slop/build/linux/x64/debug/plugins/url_launcher_linux:/home/shove_it/37/temp/slop/linux/flutter/ephemeral:"
+         FILE "$ENV{DESTDIR}/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop"
+         OLD_RPATH "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux:/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux:/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral:"
          NEW_RPATH "$ORIGIN/lib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/llvm-strip" "$ENV{DESTDIR}/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/slop")
+      execute_process(COMMAND "/usr/sbin/llvm-strip" "$ENV{DESTDIR}/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/slop")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/data/icudtl.dat")
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/data/icudtl.dat")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/data" TYPE FILE FILES "/home/shove_it/37/temp/slop/linux/flutter/ephemeral/icudtl.dat")
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/data" TYPE FILE FILES "/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/icudtl.dat")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so")
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/shove_it/37/temp/slop/linux/flutter/ephemeral/libflutter_linux_gtk.so")
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/jootw/Documents/slop/frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib/liburl_launcher_linux_plugin.so")
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib/libfile_selector_linux_plugin.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/shove_it/37/temp/slop/build/linux/x64/debug/plugins/url_launcher_linux/liburl_launcher_linux_plugin.so")
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux/libfile_selector_linux_plugin.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib/libdartjni.so")
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib/liburl_launcher_linux_plugin.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/shove_it/37/temp/slop/build/linux/x64/debug/plugins/jni/shared/libdartjni.so")
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux/liburl_launcher_linux_plugin.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib/")
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib/libdartjni.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/lib" TYPE DIRECTORY FILES "/home/shove_it/37/temp/slop/build/native_assets/linux/")
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/shared/libdartjni.so")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib/")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/lib" TYPE DIRECTORY FILES "/home/jootw/Documents/slop/frontend/build/native_assets/linux/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   
-  file(REMOVE_RECURSE "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/data/flutter_assets")
+  file(REMOVE_RECURSE "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/data/flutter_assets")
   
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/data/flutter_assets")
+   "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/data/flutter_assets")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/shove_it/37/temp/slop/build/linux/x64/debug/bundle/data" TYPE DIRECTORY FILES "/home/shove_it/37/temp/slop/build//flutter_assets")
+  file(INSTALL DESTINATION "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/bundle/data" TYPE DIRECTORY FILES "/home/jootw/Documents/slop/frontend/build//flutter_assets")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/shove_it/37/temp/slop/build/linux/x64/debug/flutter/cmake_install.cmake")
-  include("/home/shove_it/37/temp/slop/build/linux/x64/debug/runner/cmake_install.cmake")
-  include("/home/shove_it/37/temp/slop/build/linux/x64/debug/plugins/url_launcher_linux/cmake_install.cmake")
-  include("/home/shove_it/37/temp/slop/build/linux/x64/debug/plugins/jni/cmake_install.cmake")
+  include("/home/jootw/Documents/slop/frontend/build/linux/x64/debug/flutter/cmake_install.cmake")
+  include("/home/jootw/Documents/slop/frontend/build/linux/x64/debug/runner/cmake_install.cmake")
+  include("/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/file_selector_linux/cmake_install.cmake")
+  include("/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/url_launcher_linux/cmake_install.cmake")
+  include("/home/jootw/Documents/slop/frontend/build/linux/x64/debug/plugins/jni/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/shove_it/37/temp/slop/build/linux/x64/debug/install_local_manifest.txt"
+  file(WRITE "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -182,6 +195,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/shove_it/37/temp/slop/build/linux/x64/debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/jootw/Documents/slop/frontend/build/linux/x64/debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
