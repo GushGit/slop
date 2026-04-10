@@ -1,5 +1,5 @@
 class AppConfig {
   const AppConfig._();
 
-  static const String apiBaseUrl = 'http://127.0.0.1:8001';
+  static const String apiBaseUrl = 'http://132.243.213.194:8001';
 }
